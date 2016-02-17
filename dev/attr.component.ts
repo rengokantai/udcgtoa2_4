@@ -7,7 +7,7 @@ import {HDirective} from "./h.directive";
 @Component({
     selector:'attr',
     template:`
-    <div myH [hc]="'red'">H</div>
+    <div [myH]="'red'">H</div>
     <div myH>L</div>
     `,
     directives:[HDirective]

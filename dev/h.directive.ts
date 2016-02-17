@@ -6,7 +6,7 @@ import {Directive,ElementRef, OnInit,Renderer} from 'angular2/core';
 
 @Directive({
     selector:'[myH]',
-    inputs:['hc']
+    inputs:['hc:myH']
 })
 
 export class HDirective implements OnInit{
