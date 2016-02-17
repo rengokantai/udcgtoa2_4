@@ -6,10 +6,14 @@ import {Directive,ElementRef, OnInit,Renderer} from 'angular2/core';
 
 @Directive({
     selector:'[myH]',
-    inputs:['hc:myH']
+    inputs:['hc:myH'],
+    host:{
+        '(mouseenter)':'onMouseEnter()',
+        '(mouseleave)':'onMouseLeave()'
+    }
 })
 
-export class HDirective implements OnInit{
+export class HDirective{
     private _default = 'blue';
     hc:string;
 
@@ -18,8 +22,15 @@ export class HDirective implements OnInit{
 
     }
 
-    ngOnInit():any{
+    //ngOnInit():any{
+    //    this._elR.nativeElement.style.backgroundColor=(this.hc||this._default);
+    //}
+    onMouseEnter(){
         this._elR.nativeElement.style.backgroundColor=(this.hc||this._default);
-        //this._renderer.setElementStyle(this._elR,'background-color',this._default);
     }
+    onMouseLeave(){
+        this._elR.nativeElement.style.backgroundColor=null;
+    }
+
+
 }
