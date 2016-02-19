@@ -18,6 +18,14 @@ import {Component} from 'angular2/core';
         <ul><li *ngFor="#item of items, #i = index">{{item}}{{i}}
         </li></ul></div>
         </section>
+        <section class="directive">
+        <input type="text" #color (keyup)="0">
+        <div [ngSwitch]="color.value">
+        <template [ngSwitchWhen]="'red'">red</template>
+        <template [ngSwitchWhen]="'blue'">blue</template>
+        <template ngSwitchDefault>default</template>
+        </div>
+        </section>
     `
 })
 
