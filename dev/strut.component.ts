@@ -2,6 +2,7 @@
  * Created by Hernan Y.Ke on 2016/2/16.
  */
 import {Component} from 'angular2/core';
+import {UnlessDirective} from "./unless.directive";
 
 
 @Component({
@@ -26,7 +27,15 @@ import {Component} from 'angular2/core';
         <template ngSwitchDefault>default</template>
         </div>
         </section>
-    `
+        <section class="directive">
+            <input type="text" #cond (keyup)="0">
+            <div *mUnless="cond.value!='false'">
+            show
+            </div>
+        </section>
+
+    `,
+    directives:[UnlessDirective]
 })
 
 export class StructDirectives{
