@@ -18,11 +18,12 @@ System.register(['angular2/core'], function(exports_1) {
         execute: function() {
             StructDirectives = (function () {
                 function StructDirectives() {
+                    this.items = [1, 2, 3];
                 }
                 StructDirectives = __decorate([
                     core_1.Component({
                         selector: 'struct',
-                        template: "\n        <section class=\"directive\"><h2>\n        <input type=\"text\" #number (keyup)=\"0\">\n        <div *ngIf=\"number.value>2\">\n        show if greater than 2\n        </div>\n        </h2></section>\n    "
+                        template: "\n        <section class=\"directive\"><h2>\n        <input type=\"text\" #number (keyup)=\"0\">\n        <div *ngIf=\"number.value>2\">\n        show if greater than 2\n        </div>\n        </h2></section>\n        <section class=\"directive\">\n        <div>\n        <ul><li *ngFor=\"#item of items\">{{item}}\n        </li></ul></div>\n        </section>\n    "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], StructDirectives);
@@ -33,4 +34,4 @@ System.register(['angular2/core'], function(exports_1) {
     }
 });
 
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0cnV0LmNvbXBvbmVudC50cyJdLCJuYW1lcyI6WyJTdHJ1Y3REaXJlY3RpdmVzIiwiU3RydWN0RGlyZWN0aXZlcy5jb25zdHJ1Y3RvciJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7O1lBTUE7Z0JBQUFBO2dCQWNBQyxDQUFDQTtnQkFkREQ7b0JBQUNBLGdCQUFTQSxDQUFDQTt3QkFDUEEsUUFBUUEsRUFBQ0EsUUFBUUE7d0JBQ2pCQSxRQUFRQSxFQUFDQSx5TkFPUkE7cUJBQ0pBLENBQUNBOztxQ0FJREE7Z0JBQURBLHVCQUFDQTtZQUFEQSxDQWRBLEFBY0NBLElBQUE7WUFkRCwrQ0FjQyxDQUFBIiwiZmlsZSI6InN0cnV0LmNvbXBvbmVudC5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxyXG4gKiBDcmVhdGVkIGJ5IEhlcm5hbiBZLktlIG9uIDIwMTYvMi8xNi5cclxuICovXHJcbmltcG9ydCB7Q29tcG9uZW50fSBmcm9tICdhbmd1bGFyMi9jb3JlJztcclxuXHJcblxyXG5AQ29tcG9uZW50KHtcclxuICAgIHNlbGVjdG9yOidzdHJ1Y3QnLFxyXG4gICAgdGVtcGxhdGU6YFxyXG4gICAgICAgIDxzZWN0aW9uIGNsYXNzPVwiZGlyZWN0aXZlXCI+PGgyPlxyXG4gICAgICAgIDxpbnB1dCB0eXBlPVwidGV4dFwiICNudW1iZXIgKGtleXVwKT1cIjBcIj5cclxuICAgICAgICA8ZGl2ICpuZ0lmPVwibnVtYmVyLnZhbHVlPjJcIj5cclxuICAgICAgICBzaG93IGlmIGdyZWF0ZXIgdGhhbiAyXHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgPC9oMj48L3NlY3Rpb24+XHJcbiAgICBgXHJcbn0pXHJcblxyXG5leHBvcnQgY2xhc3MgU3RydWN0RGlyZWN0aXZlc3tcclxuXHJcbn0iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0cnV0LmNvbXBvbmVudC50cyJdLCJuYW1lcyI6WyJTdHJ1Y3REaXJlY3RpdmVzIiwiU3RydWN0RGlyZWN0aXZlcy5jb25zdHJ1Y3RvciJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7O1lBTUE7Z0JBQUFBO29CQWtCSUMsVUFBS0EsR0FBQ0EsQ0FBQ0EsQ0FBQ0EsRUFBQ0EsQ0FBQ0EsRUFBQ0EsQ0FBQ0EsQ0FBQ0EsQ0FBQ0E7Z0JBQ2xCQSxDQUFDQTtnQkFuQkREO29CQUFDQSxnQkFBU0EsQ0FBQ0E7d0JBQ1BBLFFBQVFBLEVBQUNBLFFBQVFBO3dCQUNqQkEsUUFBUUEsRUFBQ0EsaVhBWVJBO3FCQUNKQSxDQUFDQTs7cUNBSURBO2dCQUFEQSx1QkFBQ0E7WUFBREEsQ0FuQkEsQUFtQkNBLElBQUE7WUFuQkQsK0NBbUJDLENBQUEiLCJmaWxlIjoic3RydXQuY29tcG9uZW50LmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXHJcbiAqIENyZWF0ZWQgYnkgSGVybmFuIFkuS2Ugb24gMjAxNi8yLzE2LlxyXG4gKi9cclxuaW1wb3J0IHtDb21wb25lbnR9IGZyb20gJ2FuZ3VsYXIyL2NvcmUnO1xyXG5cclxuXHJcbkBDb21wb25lbnQoe1xyXG4gICAgc2VsZWN0b3I6J3N0cnVjdCcsXHJcbiAgICB0ZW1wbGF0ZTpgXHJcbiAgICAgICAgPHNlY3Rpb24gY2xhc3M9XCJkaXJlY3RpdmVcIj48aDI+XHJcbiAgICAgICAgPGlucHV0IHR5cGU9XCJ0ZXh0XCIgI251bWJlciAoa2V5dXApPVwiMFwiPlxyXG4gICAgICAgIDxkaXYgKm5nSWY9XCJudW1iZXIudmFsdWU+MlwiPlxyXG4gICAgICAgIHNob3cgaWYgZ3JlYXRlciB0aGFuIDJcclxuICAgICAgICA8L2Rpdj5cclxuICAgICAgICA8L2gyPjwvc2VjdGlvbj5cclxuICAgICAgICA8c2VjdGlvbiBjbGFzcz1cImRpcmVjdGl2ZVwiPlxyXG4gICAgICAgIDxkaXY+XHJcbiAgICAgICAgPHVsPjxsaSAqbmdGb3I9XCIjaXRlbSBvZiBpdGVtc1wiPnt7aXRlbX19XHJcbiAgICAgICAgPC9saT48L3VsPjwvZGl2PlxyXG4gICAgICAgIDwvc2VjdGlvbj5cclxuICAgIGBcclxufSlcclxuXHJcbmV4cG9ydCBjbGFzcyBTdHJ1Y3REaXJlY3RpdmVze1xyXG4gICAgaXRlbXM9WzEsMiwzXTtcclxufSJdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ==
